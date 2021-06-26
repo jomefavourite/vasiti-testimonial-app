@@ -39,6 +39,21 @@ export const FooterGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+  font-family: 'Roboto';
+
+  h4 {
+    margin-bottom: 2.5rem;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  li + li {
+    margin-top: 1.5rem;
+  }
+
+  a {
+    color: #fff;
+  }
 
   @media (min-width: 767px) {
     grid-template-columns: 1fr 1fr 1fr;

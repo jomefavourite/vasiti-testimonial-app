@@ -14,6 +14,7 @@ export const ExperienceContent = styled.section`
   width: 90%;
   max-width: 1200px;
   margin: 0 auto 0;
+  padding: 2rem 0;
 
   > div {
     padding: 5rem 2rem 3rem;
@@ -22,6 +23,7 @@ export const ExperienceContent = styled.section`
       margin: 1rem 0;
       letter-spacing: 0.02em;
       line-height: 150%;
+      font-size: 16px;
     }
   }
 
@@ -34,14 +36,12 @@ export const ExperienceContent = styled.section`
     margin-top: 0.5rem;
   }
 
-  picture {
-    position: relative;
-  }
-
   img {
     /* position: absolute; */
+    display: block;
     width: 100%;
-    /* margin-top: 20px; */
+    margin: auto;
+    margin-top: 15%;
   }
 
   @media (min-width: 767px) {
@@ -53,6 +53,17 @@ export const ExperienceContent = styled.section`
       align-content: center;
       margin: auto;
       padding-top: 0;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      transform: translateY(35px);
+      margin-top: 0;
     }
   }
 `;
