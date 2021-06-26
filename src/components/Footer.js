@@ -1,12 +1,12 @@
 import React from 'react';
-import {FooterSection} from '../styles/FooterStyle';
+import {FooterSection, FooterGrid, FooterContent} from '../styles/FooterStyle';
 import {Container} from '../globalStyles';
 
 const Footer = () => {
   return (
     <FooterSection>
       <Container>
-        <div>
+        <FooterContent>
           <div>
             <h2>Be a member of our community 🎉</h2>
             <p>
@@ -26,8 +26,9 @@ const Footer = () => {
             </form>
           </div>
           <img src='./images/footer-img.png' alt='' />
-        </div>
-        <div>
+        </FooterContent>
+
+        <FooterGrid>
           <div>
             <h4>Company</h4>
             <ul>
@@ -117,7 +118,7 @@ const Footer = () => {
             </ul>
             <p>Email Newsletter</p>
           </div>
-        </div>
+        </FooterGrid>
       </Container>
     </FooterSection>
   );

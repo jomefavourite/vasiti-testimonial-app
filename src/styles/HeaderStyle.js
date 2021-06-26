@@ -4,10 +4,14 @@ export const HeaderSection = styled.header`
   h1 {
     font-size: clamp(32px, 2vw + 20px, 48px);
     margin: 2rem 0;
+    max-width: 512px;
   }
 
   p {
     font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+    color: #494949;
   }
 
   .heroImg {
@@ -24,7 +28,7 @@ export const SubNav = styled.div`
 
   /* width: 90%; */
   /* max-width: 1200px; */
-  margin: 1rem auto 0;
+  margin: 1rem auto 2rem;
   font-family: 'Roboto', sans-serif;
 
   ul {

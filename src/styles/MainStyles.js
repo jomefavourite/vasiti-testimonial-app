@@ -66,7 +66,7 @@ export const ExperienceContent2 = styled(ExperienceContent)`
 export const CustomerReview = styled.div`
   display: grid;
   grid-gap: 5rem;
-  margin: auto;
+  margin: 4rem auto 8rem;
   max-width: 1200px;
 
   @media (min-width: 767px) {
