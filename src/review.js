@@ -1,7 +1,7 @@
 export const firstReview = [
   {
     image: './images/joseph-ike.png',
-    alt: '',
+    alt: 'joseph-ike',
     name: 'Joseph Ike',
     location: 'IN IKEJA',
     type: 'CUSTOMER',
@@ -10,7 +10,7 @@ export const firstReview = [
   },
   {
     image: './images/adetola-fashina.png',
-    alt: '',
+    alt: 'adetola-fashina',
     name: 'Adetola Fashina',
     location: 'IN IKEJA',
     type: 'CUSTOMER',
@@ -19,7 +19,7 @@ export const firstReview = [
   },
   {
     image: './images/emmanuel-fayemi.png',
-    alt: '',
+    alt: 'emmanuel-fayemi',
     name: 'Emmanuel Fayemi',
     location: 'IN IKEJA',
     type: 'CUSTOMER',
@@ -28,7 +28,7 @@ export const firstReview = [
   },
   {
     image: './images/chisom-obilor.png',
-    alt: '',
+    alt: 'chisom-obilor',
     name: 'Chisom Obilor',
     location: 'IN IKEJA',
     type: 'VENDOR',
@@ -37,7 +37,7 @@ export const firstReview = [
   },
   {
     image: './images/adunoluwa-adeyemi.png',
-    alt: '',
+    alt: 'adunoluwa-adeyemi',
     name: 'Adunoluwa Adeyemi',
     location: 'IN IKEJA',
     type: 'VENDOR',
@@ -46,7 +46,7 @@ export const firstReview = [
   },
   {
     image: './images/chidi-okeke.png',
-    alt: '',
+    alt: 'chidi-okeke',
     name: 'Chidi Okeke',
     location: 'IN IKEJA',
     type: 'VENDOR',
@@ -58,7 +58,7 @@ export const firstReview = [
 export const secondReview = [
   {
     image: './images/temi-obadofin.png',
-    alt: '',
+    alt: 'temi-obadofin',
     name: 'Temi Obadofin',
     type: 'VENDOR',
     review:
@@ -66,7 +66,7 @@ export const secondReview = [
   },
   {
     image: './images/promise-ejiofor.png',
-    alt: '',
+    alt: 'promise-ejiofor',
     name: 'Promise Ejiofor',
     type: 'VENDOR',
     review:
@@ -74,7 +74,7 @@ export const secondReview = [
   },
   {
     image: './images/feyisola-arinola.png',
-    alt: '',
+    alt: 'feyisola-arinola',
     name: 'Feyisola Arinola',
     type: 'VENDOR',
     review:
@@ -82,7 +82,7 @@ export const secondReview = [
   },
   {
     image: './images/karen-iben.png',
-    alt: '',
+    alt: 'karen-iben',
     name: 'Karen Ibeh',
     type: 'VENDOR',
     review:
@@ -90,7 +90,7 @@ export const secondReview = [
   },
   {
     image: './images/oluchi-uzo.png',
-    alt: '',
+    alt: 'oluchi-uzo',
     name: 'Oluchi Uzo',
     type: 'VENDOR',
     review:
@@ -98,7 +98,7 @@ export const secondReview = [
   },
   {
     image: './images/amos-okafor.png',
-    alt: '',
+    alt: 'amos-okafor',
     name: 'Amos Okafor',
     type: 'VENDOR',
     review:

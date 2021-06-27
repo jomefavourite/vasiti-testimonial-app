@@ -124,7 +124,7 @@ const Main = ({userReview}) => {
                 <>
                   <section key={i}>
                     <Container>
-                      <UserImage src={data.image} alt={data.alt} />
+                      <UserImage src={data.image} alt='User Reviewer' />
                       <h3>
                         {data.firstName} {data.lastName}
                       </h3>
