@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
+    ${'' /* min-height: 100%; */}
   }
   
   li {
@@ -41,4 +42,12 @@ export const Container = styled.div`
   width: 90%;
   max-width: 1200px;
   margin: auto;
+`;
+
+export const Button = styled.button`
+  background: ${props => (props.vendor ? '#F0FFEE' : '#EEF8FF')};
+  color: ${props => (props.vendor ? '#049A01' : '#0D019A')};
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: ${props => (props.firstReview ? 0 : '1rem 0 2rem')};
 `;

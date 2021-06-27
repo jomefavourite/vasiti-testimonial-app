@@ -1,5 +1,10 @@
 import React from 'react';
-import {FooterSection, FooterGrid, FooterContent} from '../styles/FooterStyle';
+import {
+  FooterSection,
+  FooterGrid,
+  FooterContent,
+  JoinCommunity,
+} from '../styles/FooterStyle';
 import {Container} from '../globalStyles';
 
 const Footer = () => {
@@ -100,24 +105,32 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <JoinCommunity>
             <h4>Join our community</h4>
             <ul>
               <li>
-                <a href='/'>Contact us</a>
+                <a href='/'>
+                  <img src='./images/fb.svg' alt='facebook icon' />
+                </a>
               </li>
               <li>
-                <a href='/'>Partner with us</a>
+                <a href='/'>
+                  <img src='./images/ig.svg' alt='instagram icon' />
+                </a>
               </li>
               <li>
-                <a href='/'>Advertise with us</a>
+                <a href='/'>
+                  <img src='./images/tw.svg' alt='Twitter icon' />
+                </a>
               </li>
               <li>
-                <a href='/'>Help/FAQs</a>
+                <a href='/'>
+                  <img src='./images/in.svg' alt='' />
+                </a>
               </li>
             </ul>
             <p>Email Newsletter</p>
-          </div>
+          </JoinCommunity>
         </FooterGrid>
       </Container>
     </FooterSection>

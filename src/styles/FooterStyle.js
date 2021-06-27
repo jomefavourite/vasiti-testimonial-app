@@ -100,3 +100,15 @@ export const FooterContent = styled.div`
     }
   }
 `;
+
+export const JoinCommunity = styled.div`
+  ul {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  li + li {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+`;

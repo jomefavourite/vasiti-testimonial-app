@@ -8,6 +8,14 @@ export const Experience = styled.section`
 export const Experience2 = styled(Experience)`
   background: rgba(255, 248, 245, 1);
   color: #242120;
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: 0.01em;
+    }
+  }
 `;
 
 export const ExperienceContent = styled.section`
@@ -72,6 +80,12 @@ export const ExperienceContent2 = styled(ExperienceContent)`
   .share {
     color: rgba(255, 92, 0, 1);
   }
+
+  @media (min-width: 767px) {
+    picture {
+      order: 2;
+    }
+  }
 `;
 
 export const CustomerReview = styled.div`
@@ -87,4 +101,17 @@ export const CustomerReview = styled.div`
   @media (min-width: 1023px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+`;
+
+export const UserImage = styled.img`
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+`;
+
+export const LocationType = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;

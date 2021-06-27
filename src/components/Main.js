@@ -5,11 +5,14 @@ import {
   CustomerReview,
   Experience2,
   ExperienceContent2,
+  UserImage,
+  LocationType,
 } from '../styles/MainStyles';
-import {Container} from '../globalStyles';
+import {Container, Button} from '../globalStyles';
+import {Link} from 'react-router-dom';
 import {firstReview, secondReview} from '../review';
 
-const Main = () => {
+const Main = ({userReview}) => {
   return (
     <main>
       <Experience>
@@ -25,9 +28,9 @@ const Main = () => {
               great, very good customer service, an all round great experience.
               I would definately be coming back!
             </p>
-            <a href='#' className='share'>
+            <Link to='/story' className='share'>
               Share your own story!
-            </a>
+            </Link>
           </div>
           <picture>
             <source
@@ -47,10 +50,16 @@ const Main = () => {
                 <Container>
                   <img src={data.image} alt={data.alt} />
                   <h3>{data.name}</h3>
-                  <div>
+                  <LocationType>
                     <p>{data.location}</p>
-                    <button>{data.type}</button>
-                  </div>
+                    {data.type === 'CUSTOMER' ? (
+                      <Button firstReview>{data.type}</Button>
+                    ) : (
+                      <Button vendor firstReview>
+                        {data.type}
+                      </Button>
+                    )}
+                  </LocationType>
                   <p>{data.review}</p>
                 </Container>
               </section>
@@ -69,7 +78,7 @@ const Main = () => {
             <img src='./images/victoria-experience-mob.png' alt='' />
           </picture>
           <div>
-            <h3>Victoria’s Experience</h3>
+            <h2>Victoria’s Experience</h2>
             <button>VENDOR</button>
             <p>
               I had the best experience shopping with vasiti. Usability of the
@@ -79,9 +88,9 @@ const Main = () => {
               great, very good customer service, an all round great experience.
               I would definately be coming back!
             </p>
-            <a href='/' className='share'>
+            <Link to='/story' className='share'>
               Share your own story!
-            </a>
+            </Link>
           </div>
         </ExperienceContent2>
       </Experience2>
@@ -95,7 +104,7 @@ const Main = () => {
                   <img src={data.image} alt={data.alt} />
                   <h3>{data.name}</h3>
                   <div>
-                    <button>{data.type}</button>
+                    <Button vendor>{data.type}</Button>
                   </div>
                   <p>{data.review}</p>
                 </Container>
@@ -103,6 +112,29 @@ const Main = () => {
             </>
           );
         })}
+      </CustomerReview>
+
+      <CustomerReview>
+        {userReview.length
+          ? userReview.map((data, i) => {
+              return (
+                <>
+                  <section key={i}>
+                    <Container>
+                      <UserImage src={data.image} alt={data.alt} />
+                      <h3>
+                        {data.firstName} {data.lastName}
+                      </h3>
+                      <div>
+                        <button>{data.customerVendor}</button>
+                      </div>
+                      <p>{data.story}</p>
+                    </Container>
+                  </section>
+                </>
+              );
+            })
+          : ''}
       </CustomerReview>
     </main>
   );
