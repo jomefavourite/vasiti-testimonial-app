@@ -76,7 +76,7 @@ export const secondReview = [
     image: './images/feyisola-arinola.png',
     alt: '',
     name: 'Feyisola Arinola',
-    type: 'CUSTOMER',
+    type: 'VENDOR',
     review:
       'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Elit aute irure tempor cupidatat incididunt sint deser unt ut voluptate aute id deserunt nisi. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
   },

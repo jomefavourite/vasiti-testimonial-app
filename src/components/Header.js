@@ -1,5 +1,4 @@
 import React from 'react';
-import {Container} from '../globalStyles';
 import {HeaderSection, Hero, Nav, SubNav} from '../styles/HeaderStyle';
 
 const Header = () => {
@@ -7,7 +6,7 @@ const Header = () => {
     <HeaderSection>
       <Nav>
         <a href='/'>
-          <img src='./images/vasiti-logo.svg' alt='' />
+          <img src='./images/vasiti-logo.svg' alt='Vasiti Logo' />
         </a>
         <ul>
           <li>
@@ -59,7 +58,11 @@ const Header = () => {
             media='(min-width: 477.49px)'
             srcset='./images/heroImg-des.png'
           />
-          <img className='heroImg' src='./images/heroImg-mob.png' alt='' />
+          <img
+            className='heroImg'
+            src='./images/heroImg-mob.png'
+            alt='Man and Woman smiling'
+          />
         </picture>
       </Hero>
     </HeaderSection>

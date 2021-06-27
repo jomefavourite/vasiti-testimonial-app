@@ -37,7 +37,7 @@ const Main = ({userReview}) => {
               media='(min-width: 477.49px)'
               srcSet='./images/experience-des.png'
             />
-            <img src='./images/experience-mob.png' alt='' />
+            <img src='./images/experience-mob.png' alt='Black girls' />
           </picture>
         </ExperienceContent>
       </Experience>
@@ -75,7 +75,10 @@ const Main = ({userReview}) => {
               media='(min-width: 477.49px)'
               srcSet='./images/victoria-experience-des.png'
             />
-            <img src='./images/victoria-experience-mob.png' alt='' />
+            <img
+              src='./images/victoria-experience-mob.png'
+              alt='Woman smiling'
+            />
           </picture>
           <div>
             <h2>Victoria’s Experience</h2>
