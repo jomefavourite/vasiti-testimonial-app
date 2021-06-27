@@ -114,7 +114,7 @@ const Main = ({userReview}) => {
         })}
       </CustomerReview>
 
-      <CustomerReview>
+      <CustomerReview id='new-testimonial'>
         {userReview.length
           ? userReview.map((data, i) => {
               return (
@@ -126,7 +126,11 @@ const Main = ({userReview}) => {
                         {data.firstName} {data.lastName}
                       </h3>
                       <div>
-                        <button>{data.customerVendor}</button>
+                        {data.customerVendor === 'CUSTOMER' ? (
+                          <Button>{data.customerVendor}</Button>
+                        ) : (
+                          <Button vendor>{data.customerVendor}</Button>
+                        )}
                       </div>
                       <p>{data.story}</p>
                     </Container>

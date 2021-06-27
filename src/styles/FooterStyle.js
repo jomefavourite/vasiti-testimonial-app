@@ -66,9 +66,10 @@ export const FooterGrid = styled.div`
 
 export const FooterContent = styled.div`
   display: grid;
+  margin-bottom: 3rem;
 
   h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   p {
@@ -82,15 +83,16 @@ export const FooterContent = styled.div`
     > * + * {
       margin-top: 1rem;
     }
+  }
 
-    img {
-      display: block;
-      margin: auto;
-    }
+  img {
+    display: block;
+    margin: 2rem auto 0;
   }
 
   @media (min-width: 767px) {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
 
     > div {
       order: 2;

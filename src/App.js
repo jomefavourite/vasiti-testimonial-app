@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Story from './components/Story';
+import Congrats from './components/Congrats';
 import {GlobalStyles} from './globalStyles';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path='/story'>
             <Story addReview={addReview} />
+          </Route>
+          <Route exact path='/congrats'>
+            <Congrats />
           </Route>
         </Switch>
       </Router>

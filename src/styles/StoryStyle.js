@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const SubmitBtn = styled.button`
-  display: block;
-  background: #ff5c00;
-  box-shadow: 2px 8px 30px rgba(230, 83, 0, 0.18);
-  border-radius: 8px;
-  border: none;
-  padding: 1rem;
-  color: #fff;
-  margin-left: auto;
-  cursor: pointer;
-  margin-top: 2rem;
-`;
-
 export const Form = styled.form`
   h1 {
     text-align: center;
@@ -91,4 +78,5 @@ export const CustomerVendor = styled.div`
 
 export const Error = styled.div`
   color: red;
+  text-align: center;
 `;

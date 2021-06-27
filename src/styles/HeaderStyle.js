@@ -95,13 +95,23 @@ export const Nav = styled.nav`
 `;
 
 export const Hero = styled.div`
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  > div {
+    width: 90%;
+    margin: auto;
+  }
 
   @media (min-width: 720px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+
+    > div {
+      width: 100%;
+      max-width: 510px;
+      margin: 0;
+    }
 
     h1 {
       margin: 2rem 0;

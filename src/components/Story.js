@@ -1,13 +1,13 @@
 import {useState} from 'react';
-import {GlobalStyles} from '../globalStyles';
+import {GlobalStyles, SubmitBtn} from '../globalStyles';
 import {
-  SubmitBtn,
   Form,
   StoryContainer,
   StoryName,
   CustomerVendor,
   Error,
 } from '../styles/StoryStyle';
+import {useHistory} from 'react-router-dom';
 
 const Story = ({addReview}) => {
   const [image, setImage] = useState('');
@@ -16,6 +16,9 @@ const Story = ({addReview}) => {
   const [story, setStory] = useState('');
   const [customerVendor, setCustomerVendor] = useState('');
   const [error, setError] = useState('none');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  let history = useHistory();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -34,21 +37,36 @@ const Story = ({addReview}) => {
       return false;
     }
 
+    if (validateUrl(image) === false) {
+      setError('block');
+      setErrorMessage('Incorrect Image Link');
+      return;
+    }
+
     addReview({image, firstName, lastName, customerVendor, story});
 
     setImage('');
     setFirstName('');
     setLastName('');
     setStory('');
+
+    history.push('/congrats');
   };
+
+  function validateUrl(value) {
+    return /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(
+      value
+    );
+  }
   return (
     <StoryContainer>
       <GlobalStyles />
 
       <Form onSubmit={e => handleSubmit(e)}>
-        <Error style={{display: `${error}`}}>Please fill all inputs</Error>
-
         <h1>Share your amazing story!</h1>
+        <Error style={{display: `${error}`}}>
+           {errorMessage ? errorMessage : 'Please fill all inputs'}
+        </Error>
         <div>
           <label htmlFor='picture'>Upload your Picture</label>
           <input

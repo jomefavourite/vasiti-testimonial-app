@@ -8,8 +8,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    position: relative;
     font-family: 'Inter', sans-serif;
-    ${'' /* min-height: 100%; */}
+    height: 100vh;
+    scroll-behavior: smooth;
   }
   
   li {
@@ -50,4 +52,19 @@ export const Button = styled.button`
   border: none;
   padding: 0.5rem 1rem;
   margin: ${props => (props.firstReview ? 0 : '1rem 0 2rem')};
+`;
+
+export const SubmitBtn = styled.button`
+  display: block;
+  background: #ff5c00;
+  box-shadow: 2px 8px 30px rgba(230, 83, 0, 0.18);
+  border-radius: 8px;
+  border: none;
+  padding: 1rem;
+  color: #fff;
+  margin: ${props => (props.congrats ? 'auto' : '0 0 0 auto')};
+  /* margin-left: ${props => (props.congrats ? '0' : 'auto')}; */
+  cursor: pointer;
+  margin-top: 2rem;
+  font-family: inherit;
 `;
