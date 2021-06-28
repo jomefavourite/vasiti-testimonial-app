@@ -56,7 +56,7 @@ const Header = () => {
         <picture>
           <source
             media='(min-width: 477.49px)'
-            srcset='./images/heroImg-des.png'
+            srcSet='./images/heroImg-des.png'
           />
           <img
             className='heroImg'
